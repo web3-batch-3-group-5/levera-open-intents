@@ -1,19 +1,4 @@
-<p align="center">
-    <a href="https://www.openintents.xyz/" target="_blank" title="Open Intents Framework home">
-      <img src="https://www.bootnode.dev/external/github-headers/oif.png" alt="open intents framework banner">
-    </a>
-</p>
-
-<div align="center"><strong>Intents For Everyone, With Everyone</strong></div>
-<div align="center">A modular, open-source framework for permissionless, scalable intent execution.</div>
-<br />
-
-# Open Intents Framework
-
-[![License: MIT][license-badge]][license]
-
-[license]: https://www.apache.org/licenses/LICENSE-2.0
-[license-badge]: https://img.shields.io/badge/License-Apache-blue.svg
+# Levera Open Intents
 
 ## Description
 
@@ -21,20 +6,12 @@ The Open Intents Framework is an open-source framework that provides a full stac
 
 With out-of-the-box ERC-7683 support, the Open Intents Framework standardizes cross-chain transactions and unlocks intents on day 1 for builders in the whole Ethereum ecosystem (and beyond).
 
-## Features
-
-- **ERC-7683 Reference Implementation:** Standardizes cross-chain intent execution, making transactions more interoperable and predictable across EVM chains.
-- **Open-Source Reference Solver:** application that provides customizable protocol-independent features—such as indexing, transaction submission, and rebalancing.
-- **Composable Smart Contracts:** composable framework where developers can mix and match smart contracts, solvers, and settlement layers to fit their use case
-- **Ready-to-Use UI:** A pre-built, customizable UI template that makes intents accessible to end users.
-- **Credibly Neutral:** works across different intent-based protocols and settlement mechanisms
-
 ## Directory Structure
 
+- `nitro-espresso-rollup/` - Contains the deployed contract information after setting up Arbitrum Orbit Chain integrated with Espresso, along with the installation guide and related documentation.
+- `hyperlane/` - Contains the hyperlane configuration found in `$HOME/.hyperlane/`, along with the installation guide and related documentation.
 - `solidity/` - Contains the smart contract code written in Solidity.
 - `typescript/solver/` - Houses the TypeScript implementations of the solvers that execute the intents.
-
-## Getting Started
 
 ### Prerequisites
 
@@ -42,7 +19,17 @@ With out-of-the-box ERC-7683 support, the Open Intents Framework standardizes cr
 - yarn
 - Git
 
-### Installation
+## Usage and Workflow
+
+### Nitro Node
+
+[Setting up nitro-node integrated with espresso](./nitro-espresso-rollup/README.md)
+
+### Hyperlane
+
+[Setting up hyperlane used for OIF solver](./hyperlane/README.md)
+
+### OIF (Open Intent Framework)
 
 ```bash
 git clone https://github.com/BootNodeDev/intents-framework.git
@@ -50,9 +37,21 @@ cd intents-framework
 yarn
 ```
 
-### Running the Solver
+Update `typescript/solver/` files according to previous hyperlane configuration and run the following commands
 
-Run the following commands from the root directory (you need `docker` installed)
+```bash
+cd typescript/solver/
+yarn install
+yarn build
+```
+
+We can run solver on the local terminal by running
+
+```bash
+yarn solver
+```
+
+or run solver on docker. The following commands from the root directory (you need `docker` installed)
 
 ```bash
 docker build -t solver .
@@ -77,16 +76,4 @@ docker exec -it <container-id> pm2 show
 docker exec -it <container-id> pm2 reload all
 ```
 
-### Versioning
-
-For the versions available, see the tags on this repository.
-
-### Releasing packages to NPM
-
-We use [changesets](https://github.com/changesets/changesets) to release to NPM. You can use the `release` script in `package.json` to publish.
-
-Currently the only workspace being released as an NPM package is the one in `solidity`, which contains the contracts and typechain artifacts.
-
-### License
-
-This project is licensed under the Apache 2.0 License - see the LICENSE.md file for details.
+To test intent creation, refer to [HyperlaneERC7683 Implementation](./solidity/README.md)
