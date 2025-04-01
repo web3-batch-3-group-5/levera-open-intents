@@ -3,3 +3,5 @@ forge-std/=node_modules/forge-std/src/
 @hyperlane-xyz/=node_modules/@hyperlane-xyz/core/contracts/
 contracts/=node_modules/@hyperlane-xyz/core/contracts/
 @uniswap/=node_modules/@uniswap/
+permit2/=lib/permit2/
+solmate/=lib/permit2/lib/solmate/

@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity >=0.8.25 <0.9.0;
+pragma solidity ^0.8.15;
 
 import { Script } from "forge-std/Script.sol";
 import { console2 } from "forge-std/console2.sol";
-import { Permit2 } from "@uniswap/permit2/src/Permit2.sol";
+import { Permit2 } from "permit2/src/Permit2.sol";
 
 bytes32 constant SALT = bytes32(uint256(0x0000000000000000000000000000000000000000d3af2663da51c10215000000));
 
