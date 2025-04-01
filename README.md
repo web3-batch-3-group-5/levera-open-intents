@@ -60,20 +60,20 @@ docker build -t solver .
 Once it finish building the image
 
 ```bash
-docker run -it -e [PRIVATE_KEY=SOME_PK_YOU_OWN | MNEMONIC=SOME_MNEMONIC_YOU_OWN] solver
+docker run --name solver -it -e [PRIVATE_KEY=SOME_PK_YOU_OWN | MNEMONIC=SOME_MNEMONIC_YOU_OWN] solver
 ```
 
 The solver is run using `pm2` inside the docker container so `pm2` commands can still be used inside a container with the docker exec command:
 
 ```bash
 # Monitoring CPU/Usage of each process
-docker exec -it <container-id> pm2 monit
+docker exec -it solver pm2 monit
 # Listing managed processes
-docker exec -it <container-id> pm2 list
+docker exec -it solver pm2 list
 # Get more information about a process
-docker exec -it <container-id> pm2 show
+docker exec -it solver pm2 show
 # 0sec downtime reload all applications
-docker exec -it <container-id> pm2 reload all
+docker exec -it solver pm2 reload all
 ```
 
 To test intent creation, refer to [HyperlaneERC7683 Implementation](./solidity/README.md)
