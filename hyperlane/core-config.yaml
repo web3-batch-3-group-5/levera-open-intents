@@ -1,0 +1,11 @@
+defaultHook:
+  type: merkleTreeHook
+defaultIsm:
+  relayer: "0x6dE5361925d8f869fA7dEECe6cF842CC703fE26f"
+  type: trustedRelayerIsm
+owner: "0x6dE5361925d8f869fA7dEECe6cF842CC703fE26f"
+proxyAdmin:
+  owner: "0x6dE5361925d8f869fA7dEECe6cF842CC703fE26f"
+requiredHook:
+  type: merkleTreeHook
+

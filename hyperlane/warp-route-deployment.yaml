@@ -1,0 +1,37 @@
+arbitrumsepolia:
+  interchainSecurityModule:
+    modules:
+      - relayer: '0x6dE5361925d8f869fA7dEECe6cF842CC703fE26f'
+        type: trustedRelayerIsm
+      - domains: {}
+        owner: '0x6dE5361925d8f869fA7dEECe6cF842CC703fE26f'
+        type: defaultFallbackRoutingIsm
+    threshold: 1
+    type: staticAggregationIsm
+  isNft: false
+  owner: '0x6dE5361925d8f869fA7dEECe6cF842CC703fE26f'
+  proxyAdmin:
+    address: '0x35716f3b94ef7D60dE55c9a39145A75213374415'
+    owner: '0x6dE5361925d8f869fA7dEECe6cF842CC703fE26f'
+  token: '0x082314439288EA7ed3Cf491C3fC11E04BEa6a992' #laDAI
+  # token: '0x15F5Fb51Be3219234245EB7dF9914E843498D596' #laUSDC
+  # token: '0x40126a994C0169af76871f3c2AE13203B91e1213' #laUSDT
+  # token: '0xA807B8ECf99BB922CFfda2f8be3e6b9f13d45829' #laWBTC
+  # token: '0x4Ef6ed5C8BB72FEe7a325167A35Cd8C99e6647DD' #laWETH
+  type: collateral
+leverabicalight:
+  interchainSecurityModule:
+    modules:
+      - relayer: '0x6dE5361925d8f869fA7dEECe6cF842CC703fE26f'
+        type: trustedRelayerIsm
+      - domains: {}
+        owner: '0x6dE5361925d8f869fA7dEECe6cF842CC703fE26f'
+        type: defaultFallbackRoutingIsm
+    threshold: 1
+    type: staticAggregationIsm
+  isNft: false
+  owner: '0x6dE5361925d8f869fA7dEECe6cF842CC703fE26f'
+  proxyAdmin:
+    address: '0xfE6B59DaaE1c4753051C941B9Ea27b6cD49c9d7d'
+    owner: '0x6dE5361925d8f869fA7dEECe6cF842CC703fE26f'
+  type: synthetic

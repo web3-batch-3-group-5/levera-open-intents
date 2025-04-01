@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=../schema.json
+chainId: 109695
+displayName: Leverabica Light
+domainId: 109695
+index:
+  from: 416
+isTestnet: true
+name: leverabicalight
+nativeToken:
+  decimals: 18
+  name: Ether
+  symbol: ETH
+protocol: ethereum
+rpcUrls:
+  - http: https://leverabica.light.rpc.1ok69go.space
+technicalStack: arbitrumnitro

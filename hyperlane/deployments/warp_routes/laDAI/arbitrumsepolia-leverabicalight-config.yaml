@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../schema.json
+tokens:
+  - addressOrDenom: '0x5b56ccC0932569eC7627431549EC5A2D5C97D166'
+    chainName: arbitrumsepolia
+    collateralAddressOrDenom: '0x082314439288EA7ed3Cf491C3fC11E04BEa6a992'
+    connections:
+      - token: ethereum|leverabicalight|0x185425829e5F988682784dB12de83E0ff309B182
+    decimals: 18
+    name: Mock DAI
+    standard: EvmHypCollateral
+    symbol: laDAI
+  - addressOrDenom: '0x185425829e5F988682784dB12de83E0ff309B182'
+    chainName: leverabicalight
+    connections:
+      - token: ethereum|arbitrumsepolia|0x5b56ccC0932569eC7627431549EC5A2D5C97D166
+    decimals: 18
+    name: Mock DAI
+    standard: EvmHypSynthetic
+    symbol: laDAI

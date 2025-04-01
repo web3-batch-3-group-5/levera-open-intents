@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../schema.json
+tokens:
+  - addressOrDenom: '0x0e933b39a56e98EF348DA63158ed042F1c11e598'
+    chainName: arbitrumsepolia
+    collateralAddressOrDenom: '0x4Ef6ed5C8BB72FEe7a325167A35Cd8C99e6647DD'
+    connections:
+      - token: ethereum|leverabicalight|0xdC09785337A9bc4535906507Ef70aF3B33D238F9
+    decimals: 18
+    name: Mock Wrapped Ethereum
+    standard: EvmHypCollateral
+    symbol: laWETH
+  - addressOrDenom: '0xdC09785337A9bc4535906507Ef70aF3B33D238F9'
+    chainName: leverabicalight
+    connections:
+      - token: ethereum|arbitrumsepolia|0x0e933b39a56e98EF348DA63158ed042F1c11e598
+    decimals: 18
+    name: Mock Wrapped Ethereum
+    standard: EvmHypSynthetic
+    symbol: laWETH

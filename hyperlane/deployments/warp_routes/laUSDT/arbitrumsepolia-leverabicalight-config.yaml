@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../schema.json
+tokens:
+  - addressOrDenom: '0x88f55012bA957C65E20E0c87527686fCF6e73bFC'
+    chainName: arbitrumsepolia
+    collateralAddressOrDenom: '0x40126a994C0169af76871f3c2AE13203B91e1213'
+    connections:
+      - token: ethereum|leverabicalight|0x9b811047E6C78584683EE55de600A8fad5337EA6
+    decimals: 6
+    name: Mock USD Token
+    standard: EvmHypCollateral
+    symbol: laUSDT
+  - addressOrDenom: '0x9b811047E6C78584683EE55de600A8fad5337EA6'
+    chainName: leverabicalight
+    connections:
+      - token: ethereum|arbitrumsepolia|0x88f55012bA957C65E20E0c87527686fCF6e73bFC
+    decimals: 6
+    name: Mock USD Token
+    standard: EvmHypSynthetic
+    symbol: laUSDT
